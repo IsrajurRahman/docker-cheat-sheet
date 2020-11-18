@@ -3,7 +3,17 @@ Docker Commands
 
 To **Build** a docker project
 ```
-docker build .
+docker-compose build
+```
+
+To **RUN** a docker project
+```
+docker-compose up
+```
+
+To **STOP** a docker project
+```
+docker-compose down
 ```
 
 
@@ -51,4 +61,9 @@ docker ps -s
 To **remove all containers** that are NOT running
 ```
 docker rm `docker ps -aq -f status=exited`
+```
+
+To **RUN DJANGO COMMANDS**
+```
+docker-compose run idareengine sh -c "python manage.py createsuperuser"
 ```
